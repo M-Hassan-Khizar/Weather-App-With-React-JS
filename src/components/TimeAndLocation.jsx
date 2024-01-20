@@ -1,22 +1,24 @@
 
 import React from 'react'
+import { formatToLocalTime } from "../services/WeatherServices";
+
 //we use luxon librray for D&T
-function TimeAndLocation() {
+function TimeAndLocation({ weather: { dt, timezone, name, country } }) {
   return (
     <div>
       <div className='flex items-center justify-center my-6'>
 
 <p className='text-xl text-white font-extralight'>
-Saturday, 20 January 2024 | Local time: 04:46 PM
+{formatToLocalTime(dt, timezone)}
 </p>
       </div>
       <div className='flex items-center justify-center my-3'>
-      <p className='text-3xl font-medium text-white'>Multan
+      <p className='text-3xl font-medium text-white'>{`${name}, ${country}`}
 
         </p>
       </div>
     </div>
-  )
+  );
 }
 
 export default TimeAndLocation

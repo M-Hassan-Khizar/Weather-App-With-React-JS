@@ -1,4 +1,5 @@
 import React from 'react'
+import { iconUrlFromCode } from '../services/WeatherServices';
 
 export default function Forcast({title,items}) {
   console.log(items);
@@ -41,10 +42,19 @@ export default function Forcast({title,items}) {
     </div>
 
      */}
-    
+
+     {items.map((item, index)=>(
+      <div key={index}
+      className='flex flex-col items-center justify-center'>
+        <p className='text-sm font-light'>{items.title}</p>
+        <img src={iconUrlFromCode(item.icon)}
+className='w-12 my-1' alt=''/>
+<p className='font-medium'>{`${items.temp.to.fixed()}°`}</p>
     </div>
-    </div>
+     ))}
+     </div>
+</div>
+  );
+     }  
   
-  
-  )
-}
+
