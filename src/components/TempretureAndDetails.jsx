@@ -18,7 +18,7 @@ export default function TempretureAndDetails() {
       <div className="flex flex-row items-center justify-between py-3 text-white ">
         <img
           src="http://openweathermap.org/img/wn/01d@2x.png"
-          className="w-20"
+          className="w-20"alt='' 
         ></img>
         <p className="text-5xl">34°</p>
         <div className="flex flex-col space-y-2">
@@ -52,6 +52,28 @@ Wind:
 
         </div>
       </div>
+<div className="flex flex-row items-center justify-center py-3 space-x-2 text-sm text-white " >
+
+<UilSun />
+<p className="font-light">Rise:<span className="ml-1 font-medium " >06:45AM</span></p>
+<p className="font-light">|</p>
+
+<UilSunset />
+<p className="font-light">Set:<span className="ml-1 font-medium " >06:45PM</span></p>
+<p className="font-light">|</p>
+
+<UilSun />
+<p className="font-light">High:<span className="ml-1 font-medium " >45°</span></p>
+<p className="font-light">|</p>
+
+<UilSun />
+<p className="font-light">Low:<span className="ml-1 font-medium " >40°</span></p>
+<p className="font-light"></p>
+
+</div>
+
+
+
     </div>
   );
 }
